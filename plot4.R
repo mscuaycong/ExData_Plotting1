@@ -1,6 +1,7 @@
 #Exploratory Data Analysis - Course Project 1
 #Plot 4
-#
+#Author: Melissa Cuaycong
+
 library(plyr)
 library(lubridate)
 
@@ -85,10 +86,8 @@ viewgraph4 <-function(){
      
      plot(dt,y,type="l",xlab="datetime",ylab="Global_reactive_power",yaxt="n") 
      
-     axis(2,at=seq(0,250,50),
-          labels=c("0.0","0.1","0.2","0.3","0.4","0.5"),
-          ylim=c(0,1000))
-       
+     axis(2,at=seq(0,max(y),length.out=6),
+          labels=c("0.0","0.1","0.2","0.3","0.4","0.5"))          
 }
 
 
